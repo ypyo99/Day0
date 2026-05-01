@@ -1,13 +1,19 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>내 첫번째 프로그램</title>
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;700;900&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;700;900&display=swap"
+    rel="stylesheet" />
   <style>
-    *, *::before, *::after {
-      margin: 0; padding: 0; box-sizing: border-box;
+    *,
+    *::before,
+    *::after {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
     }
 
     body {
@@ -33,18 +39,38 @@
     }
 
     /* ── 파티클 ── */
-    #particles { position: fixed; inset: 0; z-index: 0; pointer-events: none; }
+    #particles {
+      position: fixed;
+      inset: 0;
+      z-index: 0;
+      pointer-events: none;
+    }
+
     .pt {
       position: absolute;
       border-radius: 50%;
       opacity: 0;
       animation: rise linear infinite;
     }
+
     @keyframes rise {
-      0%   { transform: translateY(105vh) scale(0.2); opacity: 0; }
-      8%   { opacity: 0.8; }
-      90%  { opacity: 0.3; }
-      100% { transform: translateY(-8vh)  scale(1.2); opacity: 0; }
+      0% {
+        transform: translateY(105vh) scale(0.2);
+        opacity: 0;
+      }
+
+      8% {
+        opacity: 0.8;
+      }
+
+      90% {
+        opacity: 0.3;
+      }
+
+      100% {
+        transform: translateY(-8vh) scale(1.2);
+        opacity: 0;
+      }
     }
 
     /* ── 메인 컨테이너 ── */
@@ -71,8 +97,16 @@
       margin-bottom: 2rem;
       animation: fadeUp 1s ease 0s both;
     }
-    .badge::before { content: '✦'; font-size: 0.65rem; }
-    .badge::after  { content: '✦'; font-size: 0.65rem; }
+
+    .badge::before {
+      content: '✦';
+      font-size: 0.65rem;
+    }
+
+    .badge::after {
+      content: '✦';
+      font-size: 0.65rem;
+    }
 
     /* ── 메인 텍스트 ── */
     .title {
@@ -80,14 +114,12 @@
       font-weight: 900;
       line-height: 1.12;
       letter-spacing: -0.03em;
-      background: linear-gradient(
-        130deg,
-        #67e8f9 0%,
-        #a78bfa 30%,
-        #f472b6 55%,
-        #34d399 80%,
-        #60a5fa 100%
-      );
+      background: linear-gradient(130deg,
+          #67e8f9 0%,
+          #a78bfa 30%,
+          #f472b6 55%,
+          #34d399 80%,
+          #60a5fa 100%);
       background-size: 250% 250%;
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
@@ -97,10 +129,19 @@
         gradMove 6s ease-in-out infinite;
       filter: drop-shadow(0 0 48px rgba(167, 139, 250, 0.5));
     }
+
     @keyframes gradMove {
-      0%   { background-position: 0%   50%; }
-      50%  { background-position: 100% 50%; }
-      100% { background-position: 0%   50%; }
+      0% {
+        background-position: 0% 50%;
+      }
+
+      50% {
+        background-position: 100% 50%;
+      }
+
+      100% {
+        background-position: 0% 50%;
+      }
     }
 
     /* ── 말줄임 점 ── */
@@ -108,13 +149,35 @@
       display: inline-block;
       animation: dotBounce 1.6s ease-in-out infinite;
     }
-    .dots span:nth-child(1) { animation-delay: 0s; }
-    .dots span:nth-child(2) { animation-delay: 0.15s; }
-    .dots span:nth-child(3) { animation-delay: 0.30s; }
-    .dots span:nth-child(4) { animation-delay: 0.45s; }
+
+    .dots span:nth-child(1) {
+      animation-delay: 0s;
+    }
+
+    .dots span:nth-child(2) {
+      animation-delay: 0.15s;
+    }
+
+    .dots span:nth-child(3) {
+      animation-delay: 0.30s;
+    }
+
+    .dots span:nth-child(4) {
+      animation-delay: 0.45s;
+    }
+
     @keyframes dotBounce {
-      0%, 100% { opacity: 0.25; transform: translateY(0); }
-      50%       { opacity: 1;    transform: translateY(-10px); }
+
+      0%,
+      100% {
+        opacity: 0.25;
+        transform: translateY(0);
+      }
+
+      50% {
+        opacity: 1;
+        transform: translateY(-10px);
+      }
     }
 
     /* ── 구분선 ── */
@@ -126,8 +189,11 @@
       margin: 2rem auto;
       animation: expandLine 1s ease 0.6s both;
     }
+
     @keyframes expandLine {
-      to { width: 220px; }
+      to {
+        width: 220px;
+      }
     }
 
     /* ── 부제목 ── */
@@ -147,8 +213,8 @@
       gap: 0.4rem;
       margin-top: 2.5rem;
       padding: 0.55rem 1.4rem;
-      background: rgba(255,255,255,0.04);
-      border: 1px solid rgba(255,255,255,0.08);
+      background: rgba(255, 255, 255, 0.04);
+      border: 1px solid rgba(255, 255, 255, 0.08);
       border-radius: 8px;
       font-size: 0.8rem;
       color: rgba(134, 239, 172, 0.7);
@@ -156,6 +222,7 @@
       letter-spacing: 0.05em;
       animation: fadeUp 1s ease 1s both, blink 4s ease-in-out 2s infinite;
     }
+
     .code-hint .cursor {
       display: inline-block;
       width: 2px;
@@ -163,18 +230,34 @@
       background: rgba(134, 239, 172, 0.8);
       animation: cursorBlink 1s step-end infinite;
     }
+
     @keyframes cursorBlink {
-      0%, 100% { opacity: 1; }
-      50%       { opacity: 0; }
+
+      0%,
+      100% {
+        opacity: 1;
+      }
+
+      50% {
+        opacity: 0;
+      }
     }
 
     /* ── 공통 fadeUp ── */
     @keyframes fadeUp {
-      from { opacity: 0; transform: translateY(30px); }
-      to   { opacity: 1; transform: translateY(0); }
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
     }
   </style>
 </head>
+
 <body>
 
   <div class="bg-aura"></div>
@@ -184,7 +267,7 @@
     <div class="badge">My First Program</div>
 
     <h1 class="title">
-      내 첫번째 프로그램<span class="dots"><span>.</span><span>.</span><span>.</span><span>.</span></span>
+      내 첫번째 프로그램222<span class="dots"><span>.</span><span>.</span><span>.</span><span>.</span></span>
     </h1>
 
     <div class="divider"></div>
@@ -203,23 +286,24 @@
     const cols = [
       'rgba(103,232,249,0.75)', 'rgba(167,139,250,0.75)',
       'rgba(244,114,182,0.75)', 'rgba(52,211,153,0.75)',
-      'rgba(251,191,36,0.65)',  'rgba(96,165,250,0.75)',
+      'rgba(251,191,36,0.65)', 'rgba(96,165,250,0.75)',
     ];
     for (let i = 0; i < 45; i++) {
       const el = document.createElement('div');
       el.className = 'pt';
-      const sz  = Math.random() * 5 + 2;
+      const sz = Math.random() * 5 + 2;
       const col = cols[Math.floor(Math.random() * cols.length)];
       el.style.cssText = `
         width:${sz}px; height:${sz}px;
-        left:${Math.random()*100}%;
+        left:${Math.random() * 100}%;
         background:${col};
-        box-shadow:0 0 ${sz*3}px ${col};
-        animation-duration:${Math.random()*14+7}s;
-        animation-delay:${Math.random()*12}s;
+        box-shadow:0 0 ${sz * 3}px ${col};
+        animation-duration:${Math.random() * 14 + 7}s;
+        animation-delay:${Math.random() * 12}s;
       `;
       pWrap.appendChild(el);
     }
   </script>
 </body>
+
 </html>
